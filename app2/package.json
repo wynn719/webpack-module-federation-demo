@@ -9,11 +9,11 @@
   "devDependencies": {
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
+    "webpack-dev-server": "^4.0.0",
+    "external-remotes-plugin": "^1.0.0",
+    "html-webpack-plugin": "^5.3.2"
   },
   "dependencies": {
-    "external-remotes-plugin": "^1.0.0",
-    "html-webpack-plugin": "^5.3.2",
     "lodash": "^4.17.21"
   }
 }

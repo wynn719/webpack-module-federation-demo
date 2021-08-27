@@ -2,5 +2,11 @@
   "name": "test-webpack-module-federation",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "dev": "concurrently --kill-others \"yarn --cwd ./app1 dev\" \"yarn --cwd ./app2 dev\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
 }
