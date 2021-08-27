@@ -15,6 +15,11 @@ module.exports = {
   output: {
     publicPath: "auto",
   },
+  resolve: {
+    alias: {
+       vue: 'vue/dist/vue.js'
+    }
+  },
   module: {
     rules: [
       {
@@ -37,13 +42,13 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "app2",
+      name: "app3",
       filename: 'remoteEntry.js',
       // exposes: {
       //   './Shared': './src/shared.js',
       //   './LodashAlias': './src/lodash-alias.js',
       // },
-      shared: ['lodash']
+      shared: ['vue']
     }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
