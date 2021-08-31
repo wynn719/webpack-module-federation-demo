@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently --kill-others \"yarn --cwd ./app1 dev\" \"yarn --cwd ./app2 dev\" \"yarn --cwd ./app3-vue2 dev\""
+    "dev": "concurrently --kill-others \"yarn --cwd ./app1 dev\" \"yarn --cwd ./app2 dev\" \"yarn --cwd ./app3-vue2 dev\" \"yarn --cwd ./app4-vue2 dev\""
   },
   "license": "MIT",
   "devDependencies": {
