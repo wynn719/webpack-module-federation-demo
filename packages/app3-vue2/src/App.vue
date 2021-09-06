@@ -1,16 +1,18 @@
 <template>
   <div class="app-root">{{ title }}
-    <button @click="isShowShared = !isShowShared">lazy load Shared component</button>
+    <button @click="isShowShared = !isShowShared">懒加载app4的模块</button>
     <shared v-if="isShowShared"></shared>
   </div>
 </template>
 
 <script>
+import Loading from './Loading.vue';
+
 const Shared = () => ({
   component: import('app4/Shared'),
-  loading: 'loading...',
+  loading: Loading,
   error: 'error',
-  delay: 1000,
+  delay: 2000,
   timeout: 3000,
 });
 

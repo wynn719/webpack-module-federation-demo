@@ -7,7 +7,7 @@ export default {
   name: 'shared',
   data() {
     return {
-      title: 'shared component'
+      title: 'app4 的 shared vue component'
     }
   }
 }
