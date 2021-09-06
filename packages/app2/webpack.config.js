@@ -17,12 +17,12 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "app2",
-      filename: 'remoteEntry.js',
-      exposes: {
+      filename: 'remoteEntry.js', // 远程入口
+      exposes: { // 导出的普通模块
         './Shared': './src/shared.js',
-        './LodashAlias': './src/lodash-alias.js',
+        './LodashAlias': './src/lodash-alias.js', 
       },
-      shared: ['lodash']
+      shared: ['lodash'], // 共用 vendor 
     }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
