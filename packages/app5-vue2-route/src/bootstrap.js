@@ -1,13 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import routes from './routes';
 import App from './App.vue';
+import routes from 'app4/routes';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes,
-  mode: 'hash'
+  routes
 })
 
 new Vue({

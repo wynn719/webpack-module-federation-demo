@@ -1,6 +1,5 @@
 <template>
   <div class="app-root">
-    sdfdsfds
     {{ title }}
     <router-view></router-view>
   </div>
@@ -14,8 +13,5 @@ export default {
       title: "app4 title",
     };
   },
-  mounted() {
-    console.log('mounted');
-  }
 };
 </script>

@@ -10,7 +10,7 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     static: path.join(__dirname, "dist"),
-    port: 3004,
+    port: 3005,
   },
   output: {
     publicPath: "auto",
@@ -39,11 +39,13 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "app4",
+      name: "app5",
       filename: "remoteEntry.js",
+      remotes: {
+        app4: "app4@['http://localhost:3004']/remoteEntry.js",
+      },
       exposes: {
         "./Shared": "./src/components/Shared.vue",
-        "./routes": "./src/routes.js",
       },
       shared: ["vue", "vue-router"],
     }),
